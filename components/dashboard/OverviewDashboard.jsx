@@ -1,3 +1,4 @@
+"use client";
 /**
  * OverviewDashboard.jsx
  * AI Agent Management Dashboard — Overview screen
@@ -62,18 +63,19 @@ export const MOCK_DATA = {
 // ─── Sub-components ───────────────────────────────────────────────────────────
 
 function KpiCard({ label, icon, value, delta, trend, isCurrency }) {
-  const [displayed, setDisplayed] = useState(0);
+  const [displayed, setDisplayed] = useState(value);
+  const [mounted,   setMounted]   = useState(false);
 
   useEffect(() => {
-    const target  = value;
-    const dur     = 900;
-    const step    = 16;
-    const inc     = target / Math.ceil(dur / step);
-    let cur       = 0;
-    const t = setInterval(() => {
-      cur = Math.min(cur + inc, target);
+    setMounted(true);
+    setDisplayed(0);
+    const dur = 900, step = 16;
+    const inc = value / Math.ceil(dur / step);
+    let cur   = 0;
+    const t   = setInterval(() => {
+      cur = Math.min(cur + inc, value);
       setDisplayed(cur);
-      if (cur >= target) clearInterval(t);
+      if (cur >= value) clearInterval(t);
     }, step);
     return () => clearInterval(t);
   }, [value]);
@@ -322,3 +324,4 @@ export default function OverviewDashboard({ data = MOCK_DATA }) {
     </div>
   );
 }
+
