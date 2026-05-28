@@ -1,3 +1,4 @@
+"use client";
 /**
  * AgentOSDashboard.jsx
  * AI Agent Management Dashboard — Full template entry point
