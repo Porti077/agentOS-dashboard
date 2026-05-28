@@ -1,3 +1,4 @@
+"use client";
 /**
  * CostTracker.jsx
  * AI Agent Management Dashboard — Cost Tracker screen
@@ -321,3 +322,4 @@ export default function CostTracker({ data = MOCK_DATA, budget: initialBudget = 
     </>
   );
 }
+
