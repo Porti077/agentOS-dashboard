@@ -1,3 +1,4 @@
+"use client";
 /**
  * AgentBuilder.jsx
  * AI Agent Management Dashboard — Agent Builder screen
@@ -405,3 +406,4 @@ export default function AgentBuilder({ agent = MOCK_AGENT, onSave, onDeploy }) {
     </div>
   );
 }
+
