@@ -1,3 +1,4 @@
+"use client";
 /**
  * ToolRegistry.jsx
  * AI Agent Management Dashboard — Tool Registry screen
