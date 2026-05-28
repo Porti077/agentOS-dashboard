@@ -1,3 +1,4 @@
+"use client";
 /**
  * ExecutionLog.jsx
  * AI Agent Management Dashboard — Execution Log screen
@@ -380,3 +381,4 @@ export default function ExecutionLog({ run = MOCK_RUN, onExport }) {
 
 // ─── Dev preview (remove before submitting to ThemeForest) ───────────────────
 // export function DevPreview() { return <ExecutionLog />; }
+
